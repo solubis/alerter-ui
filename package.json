@@ -3,7 +3,7 @@
     "version": "1.0.0-RC1",
     "license": "Unlicense",
     "main": "dist/js/ui.min.js",
-    "repository": "git@code.solubis.com:components/ui.git",
+    "repository": "git@gitlab.com:solubis/alerter-ui.git",
     "description": "Alerter UI Framework",
     "devDependencies": {
         "bower": "*",

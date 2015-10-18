@@ -8,8 +8,8 @@
         "dist/css/iqui.min.css",
         "dist/js/iqui.min.js"
     ],
-    "description": "iQUI Framework - Material Design UI for AngularJS",
-    "license": "IMPAQ",
+    "description": "Alerter UI Framework - Material Design UI for AngularJS",
+    "license": "Solubis",
     "ignore": [
         "node_modules",
         "lib",
