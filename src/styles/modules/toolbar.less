@@ -1,0 +1,45 @@
+// Toolbar
+
+.toolbar {
+    .block-header();
+
+    white-space: nowrap;
+    padding-left: 20px !important;
+    width: 100%;
+    overflow: visible;
+    position: fixed;
+    top: @navbar-height;
+    height: @navbar-height;
+    left: 0;
+    right: 0;
+    background-color: @gray-lightest;
+    z-index: 4;
+    border-bottom: @gray-light 1px solid;
+
+    & > h2 {
+        float: left;
+        line-height: @navbar-height;
+        padding-right: 20px;
+    }
+
+    .buttons {
+        position: relative;
+        z-index: 3;
+        top: 13px;
+    }
+
+    .actions {
+        top: 13px;
+        right: 25px;
+        z-index: 3;
+    }
+
+}
+
+.toggled.sw-toggled {
+    .toolbar {
+        @media (min-width: 1200px) {
+            padding-left: 270px !important;
+        }
+    }
+}

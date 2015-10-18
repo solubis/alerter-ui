@@ -1,0 +1,38 @@
+{
+    "name": "Alerter UI Framework",
+    "version": "1.0.0-RC1",
+    "authors": [
+        "Jurek Błaszczyk"
+    ],
+    "main": [
+        "dist/css/iqui.min.css",
+        "dist/js/iqui.min.js"
+    ],
+    "description": "iQUI Framework - Material Design UI for AngularJS",
+    "license": "IMPAQ",
+    "ignore": [
+        "node_modules",
+        "lib",
+        "test"
+    ],
+    "dependencies": {
+        "jquery": "~2",
+        "angular": "~1.4",
+        "angular-animate": "~1.4",
+        "angular-sanitize": "~1.4",
+        "angular-ui-router": "*",
+        "angular-aria": "~1.4",
+        "angular-i18n": "~1.4",
+        "angular-mocks": "~1.4",
+        "angular-bootstrap": "~0.13",
+        "momentjs": "~2.9",
+        "bootstrap": "~3.3",
+        "material-design-iconic-font": "~1.1",
+        "requirejs": "~2.1",
+        "jquery.nicescroll": "~3.6",
+        "jquery.easy-pie-chart": "~2.1",
+        "waves": "~0.7",
+        "velocity": "~1.2",
+        "jasmine-jquery": "~2.1"
+    }
+}

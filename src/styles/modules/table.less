@@ -1,0 +1,152 @@
+.table {
+    background-color: #fff;
+    margin-bottom: 0;
+
+    margin-top: 10px;
+
+    .row-stripe {
+        width: 5px;
+        height: 50px;
+        overflow: hidden;
+        background-color: @brand-warning;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+
+    & > thead > tr > th {
+        background-color: #fff;
+        vertical-align: middle;
+        font-weight: 500;
+        color: #333;
+        border-width: 1px;
+    }
+
+    [class*="bg-"] {
+        & > tr > th {
+            color: #fff;
+            border-bottom: 0;
+        }
+
+        & + tbody > tr:first-child > td {
+            border-top: 0;
+        }
+    }
+
+    &.table-inner {
+        border: 0;
+    }
+
+    & > thead > tr,
+    & > tbody > tr,
+    & > tfoot > tr {
+        & > th, & > td {
+            &:first-child {
+                padding-left: 30px;
+            }
+
+            &:last-child {
+                padding-right: 30px;
+            }
+
+        }
+    }
+
+    & > tbody, & > tfoot {
+        & > tr {
+            &.active,
+            &.info,
+            &.warning,
+            &.succes,
+            &.danger {
+                & > td {
+                    border: 0;
+                }
+            }
+
+            &:last-child > td >  {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .btn-icon {
+            background: #fff;
+            border: 1px solid #eee !important;
+    }
+}
+
+.table-striped {
+    td, th {
+        border: 0 !important;
+    }
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #ECF9FF !important;
+}
+
+.table-bordered {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+
+    & > tbody > tr {
+        & > td, & > th {
+            border-bottom: 0;
+            border-left: 0;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    & > thead > tr > th {
+        border-left: 0;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+
+.table-vmiddle {
+    td {
+        vertical-align: middle !important;
+    }
+}
+
+.table-responsive {
+    border: 0;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 1px solid @gray-light;
+    padding: 0px 5px 10px 5px;
+}
+
+.table > tbody > tr > td, .table > tfoot > tr > td, .table > tfoot > tr > th {
+    padding: 4px 5px 4px 5px;
+    line-height: 1;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table > thead > tr > th {
+    vertical-align: middle;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.pagination {
+    margin: 0;
+
+    & > li > a, & > li > span {
+    }
+}

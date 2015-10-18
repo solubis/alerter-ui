@@ -1,0 +1,188 @@
+*, button, input, i, a {
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:active,
+*:hover {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+html {
+    height: 100%;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body {
+    font-weight: 400;
+    height: inherit;
+    padding-top: @navbar-height;
+}
+
+audio, video {
+  outline: none;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+small {
+    font-size: 11px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    small {
+        font-size: 12px;
+    }
+}
+
+/*
+ * Ordered Lists
+ */
+
+
+.clist {
+    list-style: none;
+
+    & > li {
+        &:before {
+            font-family: 'Material Design Iconic Font';
+            margin: 0 10px 0 -20px;
+            vertical-align: middle;
+        }
+    }
+
+    &.clist-angle > li:before {
+        content: "\f1b6";
+    }
+
+    &.clist-check > li:before {
+        content: "\f299";
+    }
+
+    &.clist-star > li:before {
+        content: "\f2e5";
+    }
+}
+
+// Main Content
+
+.main {
+    padding: 30px 0;
+    .container-fluid();
+}
+
+// Content
+
+.content {
+    .container-fluid();
+
+    padding-top: 20px;
+
+    position: absolute;
+    top: @navbar-height * 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .block-header {
+        padding: 0 5px;
+    }
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+// Other
+
+dt, dd {
+    line-height: 1.7;
+}
+
+.loading {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: @gray-light;
+    text-align: center;
+}
+
+.no-data {
+    .loading();
+}
+
+.link-color {
+    color: @link-color;
+}
+
+pre.prettyprint {
+    border: 0px solid @gray-light;
+    background-color: @gray-lightest;
+    padding: 20px;
+}
+
+// Fixed bug in Angular Bootstrap (not working with Bootstrap 3.3)
+.modal-backdrop {
+    bottom: 0px;
+    position: fixed;
+}
+
+.wrap-words {
+    white-space: pre-line;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+#main {
+    position: relative;
+}
+
+body {
+    #content {
+        padding: 30px 0;
+    }
+
+    &.sw-toggled {
+        #content {
+            @media (min-width: @screen-lg-min) {
+                padding: 30px 0 30px 250px;
+            }
+
+            & > .container {
+                @media (min-width: @screen-lg-min) {
+                    width: ~"calc(100% - 30px)";
+                }
+            }
+        }
+
+        .toolbar {
+            @media (min-width: @screen-lg-min) {
+                padding-left: 270px;
+            }
+        }
+
+        .content {
+            @media (min-width: @screen-lg-min) {
+                padding-left: 270px;
+            }
+        }
+    }
+}
+

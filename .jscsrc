@@ -1,0 +1,8 @@
+{
+    "preset": "google",
+    "validateIndentation": 4,
+    "disallowSpacesInAnonymousFunctionExpression": null,
+    "disallowSpacesInFunctionExpression": null,
+    "maximumLineLength": 5000,
+    "excludeFiles": ["./gruntfile.js"]
+}

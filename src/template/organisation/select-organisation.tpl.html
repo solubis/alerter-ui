@@ -1,0 +1,25 @@
+<div class="dropdown" dropdown auto-close="outsideClick" is-open="isDropdownOpen">
+    <a href="" class="dropdown-toggle form-control" dropdown-toggle ng-disabled="ngDisabled" ng-required="ngRequired">
+        {{ assignee.userFullName || assignee.groupName || 'Select element...' | translate}}
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-lg">
+        <div class="search-wrapper">
+            <input type="text"
+                   class="form-control search-input"
+                   placeholder="{{ 'Search...' | translate}}"
+                   ng-model="searchText"
+                   ng-enter="false"
+                   tabindex="1"
+                   ng-change="search()">
+        </div>
+
+        <input ng-model="assignee" style="display: none;" name="assignee">
+
+        <div tree-view="organisation"
+             tree-view-options="options"
+             focus-if="isDropdownOpen"
+             tabindex="2"
+             ng-model="assignee"></div>
+    </div>
+</div>

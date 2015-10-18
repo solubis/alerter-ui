@@ -1,0 +1,44 @@
+<div class="dropdown-menu datepicker" ng-class="'datepicker-mode-' + $mode" style="max-width: 210px;">
+    <table style="table-layout: fixed; height: 100%; width: 100%;">
+        <thead>
+        <tr class="text-center">
+            <th>
+                <button tabindex="-1" type="button" class="btn btn-link pull-left" ng-click="$selectPane(-1)">
+                    <i class="{{$iconLeft}}"></i>
+                </button>
+            </th>
+            <th colspan="{{ rows[0].length - 2 }}">
+                <button tabindex="-1" type="button" class="btn btn-link btn-block text-strong"
+                        ng-click="$toggleMode()">
+                    <strong style="text-transform: capitalize;" ng-bind="title"></strong>
+                </button>
+            </th>
+            <th>
+                <button tabindex="-1" type="button" class="btn btn-link pull-right" ng-click="$selectPane(+1)">
+                    <i class="{{$iconRight}}"></i>
+                </button>
+            </th>
+        </tr>
+        <tr ng-show="showLabels" ng-bind-html="labels"></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="(i, row) in rows" height="{{ 100 / rows.length }}%">
+            <td class="text-center" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-link btn-sm"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday && !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled">
+                    <span ng-class="{'text-muted': el.muted}" ng-bind="el.label"></span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div style="padding:10px 0px 20px 0px">
+		<span class="pull-left">
+			<button type="button" class="btn btn-icon" tabindex="-1" ng-click="$today()" tooltip="Dziś" tooltip-placement="bottom"><i class="md md-event c-blue"></i></button>
+			<button type="button" class="btn btn-icon" tabindex="-1" ng-click="$clear()" tooltip="Kasuj" tooltip-placement="bottom"><i class="md md-clear c-red"></i></button>
+		</span>
+        <button type="button" class="btn btn-icon pull-right"  tabindex="-1" ng-click="$close()" tooltip="Zamknij" tooltip-placement="bottom"><i class="md md-done c-green"></i></button>
+    </div>
+</div>

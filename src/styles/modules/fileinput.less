@@ -1,0 +1,68 @@
+
+.btn-file {
+
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+
+    > input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        font-size: 23px;
+        height: 100%;
+        width: 100%;
+        direction: ltr;
+        cursor: pointer;
+    }
+}
+
+.fileinput {
+
+    margin-bottom: 9px;
+    display: inline-block;
+
+    .btn {
+        vertical-align: middle;
+    }
+
+    .input-group-addon {
+        padding: 0 10px;
+        vertical-align: middle;
+    }
+}
+
+.fileinput-fileinfo {
+
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    display: block;
+    overflow: hidden;
+
+    .dl-horizontal {
+
+        dt, dd {
+            padding: 2px 0;
+        }
+
+        dt {
+            float: left;
+            width: 70px;
+            clear: left;
+            text-align: right;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        dd {
+            margin-left: 80px;
+        }
+    }
+}

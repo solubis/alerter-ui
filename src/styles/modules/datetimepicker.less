@@ -1,0 +1,55 @@
+.datetimepicker {
+}
+
+.datepicker.dropdown-menu, .timepicker.dropdown-menu {
+    .transition(none);
+    .transition-duration(0ms);
+    .backface-visibility(hidden);
+
+    .btn.btn-link {
+    }
+
+    .btn-sm {
+        box-shadow: none !important;
+        padding: 3px 2px;
+        border-radius: 50px;
+        font-size: 12px;
+        line-height: 1.5;
+        width: 2em;
+        height: 2em;
+
+        &:hover {
+            background-color: @gray-lighter;
+            color: black;
+        }
+    }
+
+    .btn-sm.btn-today {
+        background-color: @brand-info;
+        color: white;
+
+        &:hover {
+            background-color: darken(@brand-info, 10%);
+        }
+    }
+
+    .btn-sm.btn-primary {
+        background-color: @brand-primary;
+        color: white;
+        &:hover {
+            background-color: darken(@brand-primary, 10%);
+        }
+    }
+
+    .dow {
+        font-size: 10px;
+        padding: 5px 0px;
+    }
+
+}
+
+.datepicker.dropdown-menu, .timepicker.dropdown-menu {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
